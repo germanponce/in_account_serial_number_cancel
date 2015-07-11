@@ -19,7 +19,12 @@
             <field name="arch" type="xml">
                 <field name="number" position="replace">
                     <field name="internal_number" />
+                    <separator string="Cancelada" attrs="{'invisible':[('state','!=','cancel')]}"/>
                 </field>
+<!--                 <sheet string="Invoice" position="replace">
+                    <sheet string="Invoice" attrs="{'invisible':[('state','=','cancel')]}">
+                        <separator string="Cancelada" attrs="{'invisible':[('state','!=','cancel')]}"/>
+                </sheet> -->
             </field>
         </record>
 
@@ -30,6 +35,8 @@
             <field name="arch" type="xml">
                 <field name="number" position="replace">
                     <field name="internal_number" />
+                    <separator string="Cancelada" attrs="{'invisible':[('state','!=','cancel')]}"/>
+
                 </field>
             </field>
         </record>
