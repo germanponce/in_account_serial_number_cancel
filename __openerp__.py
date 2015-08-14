@@ -8,23 +8,32 @@
 ############################################################################
 
 {
-    'name': 'Conservar Serie Cancelada Facturacion.',
+    'name': 'Consulta de Tasa de Cambio USD',
     'version': '1',
     "author" : "German Ponce Dominguez",
     "category" : "Facturacion",
     'description': """
 
-Este modulo modifica la Factura para mostrar si esta cancelada o no.
-Este modulo tambien conserva el Consecutivo de las facturas canceladas.
+Este modulo modifica las tasas de cambio para los Dolares, consultando la pagina oficial http://www.cambiodolar.mx/
+y obteniendo automaticamente el valor actual.
+
+Es necesario instalar la libreria:
+    - pyquery
+
+En Linux ejecutamos:
+    - sudo pip install pyquery
+
+
+Nota: por el momento solo funciona con Dolares.
 
     """,
-    "website" : "http://integra.avalos.co",
+    "website" : "http://poncesoft.blogspot.com",
     "license" : "AGPL-3",
-    "depends" : ["account",],
+    "depends" : ["base",],
     "init_xml" : [],
     "demo_xml" : [],
     "update_xml" : [
-                    "report.xml",
+                    "view.xml",
                     ],
     "installable" : True,
     "active" : False,
